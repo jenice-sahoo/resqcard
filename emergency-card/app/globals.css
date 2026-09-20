@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f7f6f3;
+  color: #15191c;
+}
+
+::selection {
+  background-color: #0b5d52;
+  color: white;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded px-5 py-2.5 text-sm font-medium transition-colors;
+}
+
+.btn-primary {
+  @apply btn bg-trust text-white hover:bg-trust-dark;
+}
+
+.btn-alert {
+  @apply btn bg-alert text-white hover:bg-alert-dark;
+}
+
+.btn-outline {
+  @apply btn border border-line bg-white text-ink hover:border-ink;
+}
+
+.card {
+  @apply rounded-lg border border-line bg-white p-6;
+}
+
+.input {
+  @apply w-full rounded border border-line bg-white px-3.5 py-2.5 text-sm text-ink placeholder:text-muted focus:border-trust focus:outline-none focus:ring-1 focus:ring-trust;
+}
+
+.label {
+  @apply mb-1.5 block text-sm font-medium text-ink;
+}
